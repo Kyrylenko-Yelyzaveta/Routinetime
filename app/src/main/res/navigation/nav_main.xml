@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.example.routinetime.view.LaunchFragment"
+        android:label="fragment_launch"
+        tools:layout="@layout/fragment_launch" >
+        <action
+            android:id="@+id/action_launchFragment_to_signInOrUpFragment"
+            app:destination="@id/signInOrUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInOrUpFragment"
+        android:name="com.example.routinetime.view.SignInOrUpFragment"
+        android:label="fragment_sing_in_or_out"
+        tools:layout="@layout/fragment_sign_in_or_up" >
+        <action
+            android:id="@+id/action_singInOrOutFragment_to_dailyReportFragment"
+            app:destination="@id/dailyReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyReportFragment"
+        android:name="com.example.routinetime.view.DailyReportFragment"
+        android:label="fragment_daily_report"
+        tools:layout="@layout/fragment_daily_report" >
+        <action
+            android:id="@+id/action_dailyReportFragment_to_launchFragment"
+            app:destination="@id/launchFragment" />
+    </fragment>
+</navigation>

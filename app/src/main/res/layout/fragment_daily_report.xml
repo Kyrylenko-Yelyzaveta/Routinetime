@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layDailyReport"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txtSalutation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/hello_blank_fragment"
+        android:textAllCaps="true"
+        android:textColor="@color/main_launch_text_colour"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layPlainTexts"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalutation">
+
+        <TextView
+            android:id="@+id/txtNameofPartsCoumn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_of_part"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/main_launch_text_colour"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/edPartName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@drawable/background_for_edit_text"
+            android:ems="10"
+            android:paddingStart="@dimen/margin_32"
+            android:hint="@string/input_name_of_detail"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="@color/black"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toEndOf="@id/layPlainTexts"
+        app:layout_constraintTop_toBottomOf="@+id/txtSalutation">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/main_launch_text_colour"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button"
+            android:text="@string/start_meaning_for_counter"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSendReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/background_button"
+        android:text="@string/send_report"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddNewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_button"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layPlainTexts" />
+
+    <Button
+        android:id="@+id/btnGetReports"
+        android:layout_width="107dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_button"
+        android:text="Get Reports"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSendReport" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
